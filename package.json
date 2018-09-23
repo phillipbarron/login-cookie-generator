@@ -1,5 +1,5 @@
 {
-  "name": "bbc-login-cookie-builder",
+  "name": "login-cookie-builder",
   "version": "0.0.1",
   "description": "build login cookies from tokens",
   "main": "lib/index.js",
