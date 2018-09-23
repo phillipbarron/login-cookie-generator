@@ -1,6 +1,6 @@
 ### Cookie builder
 
-builds login cookies when supplied with a valid taken response
+builds login cookies when supplied with a valid token response
 
 #### Usage:
 
