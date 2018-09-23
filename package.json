@@ -2,7 +2,7 @@
   "name": "bbc-login-cookie-builder",
   "version": "0.0.1",
   "description": "build login cookies from tokens",
-  "main": "index.js",
+  "main": "lib/index.js",
   "scripts": {
     "build": "babel ./src -d ./lib",
     "prepublishOnly": "npm run build",
@@ -13,6 +13,11 @@
     "login",
     "cookie"
   ],
+  "jest": {
+    "collectCoverage": true,
+    "coverageReporters": ["json", "html"],
+    "testPathIgnorePatterns": ["/node_modules/", "/lib/"]
+  },
   "author": "Phill Barron",
   "license": "ISC",
   "devDependencies": {
@@ -20,6 +25,7 @@
     "@babel/core": "^7.0.0",
     "@babel/preset-env": "^7.0.0",
     "babel-cli": "^6.26.0",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
     "babel-preset-env": "^1.7.0",
     "jest": "^23.5.0"
   }
