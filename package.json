@@ -15,8 +15,14 @@
   ],
   "jest": {
     "collectCoverage": true,
-    "coverageReporters": ["json", "html"],
-    "testPathIgnorePatterns": ["/node_modules/", "/lib/"]
+    "coverageReporters": [
+      "json",
+      "html"
+    ],
+    "testPathIgnorePatterns": [
+      "/node_modules/",
+      "/lib/"
+    ]
   },
   "author": "Phill Barron",
   "license": "ISC",

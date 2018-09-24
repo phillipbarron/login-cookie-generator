@@ -32,3 +32,18 @@ test('it returns overrides in each cookie', () => {
     }])
 });
 
+test('overrides override', () => {
+    const cookies = cookieBuilder.buildCookies({
+        id_token: 'foo',
+        access_token: 'bar'
+    }, {name: 'baz'});
+    expect(cookies.length).toBe(2);
+    expect(cookies).toEqual([{
+        name: 'baz',
+        value: 'foo',
+    }, {
+        name: 'baz',
+        value: 'bar'
+    }])
+});
+
