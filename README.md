@@ -1,21 +1,27 @@
-### Cookie builder
+# Cookie builder
 
 builds login cookies when supplied with a valid token response
 
-#### Usage:
+## Usage
+
 Just tokens:
-```js
+
+```javascript
 const loginTokenGenerator = require('login-token-generator');
 const cookieBuilder = require('cookie-builder');
 const myCookies = cookieBuilder.buildCookies(loginTokenGenerator.generateToken());
 ```
+
 with additional parameters:
-```js
+
+```javascript
 const loginTokenGenerator = require('login-token-generator');
 const cookieBuilder = require('cookie-builder');
 const myCookies = cookieBuilder.buildCookies(loginTokenGenerator.generateToken(), {foo: 'bar'});
 ```
-#### Testing:
+
+## Test
+
 ```bash
-npm run test
+yarn test
 ```
