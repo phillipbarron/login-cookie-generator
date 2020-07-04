@@ -1,23 +1,40 @@
 # Cookie builder
 
-builds login cookies when supplied with a valid token response
+builds login cookies when supplied with a valid token from the [PP Login library](https://github.com/bbc/partner-platform-bbclogin-id-token-generator)
 
 ## Usage
 
 Just tokens:
 
 ```javascript
+const createIdToken = require('@bbc/partner-platform-bbclogin-id-token-generator').createIdToken;
 const loginTokenGenerator = require('login-token-generator');
 const cookieBuilder = require('cookie-builder');
-const myCookies = cookieBuilder.buildCookies(loginTokenGenerator.generateToken());
+
+const myCookies = cookieBuilder.buildCookies(await createIdToken());
 ```
 
 with additional parameters:
 
 ```javascript
-const loginTokenGenerator = require('login-token-generator');
+const createIdToken = require('@bbc/partner-platform-bbclogin-id-token-generator').createIdToken;
 const cookieBuilder = require('cookie-builder');
-const myCookies = cookieBuilder.buildCookies(loginTokenGenerator.generateToken(), {foo: 'bar'});
+
+const myCookies = cookieBuilder.buildCookies(await createIdToken(), { donmain: 'foo.bar.baz.co.uk'});
+
+// myCookies:
+// [
+//     {
+//         name: 'ckns_pp_id',
+//         value: 'foo',
+//         domain: 'foo.bar.baz.co.uk'
+//     },
+//     {
+//         name: 'ckns_pp_session',
+//         value: 'bar'
+//         domain: 'foo.bar.baz.co.uk'
+//     }
+// ]
 ```
 
 ## Test
