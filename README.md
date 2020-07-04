@@ -20,7 +20,10 @@ with additional parameters:
 const createIdToken = require('@bbc/partner-platform-bbclogin-id-token-generator').createIdToken;
 const cookieBuilder = require('cookie-builder');
 
-const myCookies = cookieBuilder.buildCookies(await createIdToken(), { donmain: 'foo.bar.baz.co.uk'});
+const myCookies = cookieBuilder.buildCookies(
+    await createIdToken(),
+    { donmain: 'foo.bar.baz.co.uk'}
+);
 
 // myCookies:
 // [
