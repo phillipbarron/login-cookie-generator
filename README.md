@@ -1,6 +1,6 @@
 # Cookie builder
 
-builds login cookies when supplied with a valid token from the [PP Login library](https://github.com/bbc/partner-platform-bbclogin-id-token-generator)
+builds login cookies when supplied with valid tokens from the [PP Login library](https://github.com/bbc/partner-platform-bbclogin-id-token-generator)
 
 ## Usage
 
