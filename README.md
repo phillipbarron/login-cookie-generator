@@ -22,7 +22,7 @@ const cookieBuilder = require('cookie-builder');
 
 const myCookies = cookieBuilder.buildCookies(
     await createIdToken(),
-    { donmain: 'foo.bar.baz.co.uk'}
+    { domain: 'foo.bar.baz.co.uk'}
 );
 
 // myCookies:
